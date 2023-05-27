@@ -2,7 +2,7 @@
 
 ### Este repositório tem como objetivo apresentar resoluções de alguns desafios de programação na linguagem C#, junto de respostas a respeito das implementações
 
-#### Conclusão em  ![50%](https://progress-bar.dev/50) 
+#### Conclusão em  -> ![50%](https://progress-bar.dev/50) 
 
 - [x] Desafio 1
 - [x] Desafio 2
