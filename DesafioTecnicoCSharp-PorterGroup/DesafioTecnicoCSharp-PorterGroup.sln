@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio-1", "Desafio-1\Desa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio-1.Tests", "Desafio-1.Tests\Desafio-1.Tests.csproj", "{589FFC5C-0A83-4A28-BA2E-0A598D084FE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1", "1", "{ECB8A876-C848-406A-90E4-9AB263A80CF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F41CF07C-8E36-4759-9699-A093B9370774} = {ECB8A876-C848-406A-90E4-9AB263A80CF5}
+		{589FFC5C-0A83-4A28-BA2E-0A598D084FE8} = {ECB8A876-C848-406A-90E4-9AB263A80CF5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {243E8C1C-6954-4433-9EEA-D8060337F6F7}
