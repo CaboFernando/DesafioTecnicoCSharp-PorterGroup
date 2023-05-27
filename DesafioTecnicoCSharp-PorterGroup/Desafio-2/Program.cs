@@ -15,13 +15,18 @@
 
     public static void Main(string[] args)
     {
-        int[] numeros = new int[1000000];
+        Console.WriteLine("Digite os números separados por vírgula:");
+        string entrada = Console.ReadLine();
 
-        for (int i = 0; i < numeros.Length; i++)
-            numeros[i] = 1;
+        string[] numerosString = entrada.Split(',');
+        int[] numeros = new int[numerosString.Length];
+
+        for (int i = 0; i < numerosString.Length; i++)
+        {
+            numeros[i] = Convert.ToInt32(numerosString[i]);
+        }
 
         int resultado = SomarNumeros(numeros);
-        
 
         Console.WriteLine("A soma dos números é: " + resultado);
     }
