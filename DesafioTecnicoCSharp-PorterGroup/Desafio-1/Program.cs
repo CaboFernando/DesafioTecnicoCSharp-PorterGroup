@@ -6,10 +6,17 @@ public class NumerosEmPalavras
         "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"
     };
 
+    private static string[] dezenas = {
+        "", "", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"
+    };
+
     public static string ConverteNumerosEmPalavras(int numero)
     {
         if (numero < 20)
             return unidades[numero];
+
+        if (numero < 100)
+            return dezenas[numero / 10] + ((numero % 10 != 0) ? " e " + ConverteNumerosEmPalavras(numero % 10) : "");
 
         return "";
     }
