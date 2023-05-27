@@ -29,7 +29,16 @@ public class NumerosEmPalavras
 
             return centenas[numero / 100] + ((numero % 100 != 0) ? " e " + ConverteNumerosEmPalavras(numero % 100) : "");
         }
-            
+
+        if (numero < 1000000)
+        {
+            if (numero == 1000) return "mil";
+
+            return ConverteNumerosEmPalavras(numero / 1000) + " mil" + ((numero % 1000 != 0) ? " e " + ConverteNumerosEmPalavras(numero % 1000) : "");
+        }
+
+        if (numero < 1000000000)
+            return ConverteNumerosEmPalavras(numero / 1000000) + " milhão" + ((numero % 1000000 != 0) ? " e " + ConverteNumerosEmPalavras(numero % 1000000) : "");
 
 
         return "";
