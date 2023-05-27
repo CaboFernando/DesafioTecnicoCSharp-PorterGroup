@@ -17,6 +17,9 @@ public class NumerosEmPalavras
 
     public static string ConverteNumerosEmPalavras(int numero)
     {
+        if (numero < 0)
+            return "menos " + ConverteNumerosEmPalavras(Math.Abs(numero));
+
         if (numero < 20)
             return unidades[numero];
 
