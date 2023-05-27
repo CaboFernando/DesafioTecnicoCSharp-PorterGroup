@@ -10,6 +10,11 @@ public class NumerosEmPalavras
         "", "", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"
     };
 
+    private static string[] centenas = {
+        "", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos",
+        "oitocentos", "novecentos"
+    };
+
     public static string ConverteNumerosEmPalavras(int numero)
     {
         if (numero < 20)
@@ -17,6 +22,15 @@ public class NumerosEmPalavras
 
         if (numero < 100)
             return dezenas[numero / 10] + ((numero % 10 != 0) ? " e " + ConverteNumerosEmPalavras(numero % 10) : "");
+
+        if (numero < 1000)
+        {
+            if (numero == 100) return "cem";
+
+            return centenas[numero / 100] + ((numero % 100 != 0) ? " e " + ConverteNumerosEmPalavras(numero % 100) : "");
+        }
+            
+
 
         return "";
     }
