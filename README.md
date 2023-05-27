@@ -7,5 +7,4 @@
 - [ ] Desafio 3
 - [ ] Desafio 4
 
-|-------------------|
-| Conclusão 2 | ![50%](https://progress-bar.dev/50) |
+| Conclusão em | ![50%](https://progress-bar.dev/50) |
