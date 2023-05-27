@@ -19,3 +19,13 @@ A função continua a abordagem recursiva para números maiores, como mil (1000)
 Um dos principais desafios dessa implementação é lidar com os diferentes intervalos de números e garantir que as palavras sejam concatenadas corretamente. Ja tinha em mente que números menores que 20 deverias ter a particularidade. Mas oque mais me travou foi tentar pela recursão não repetir nenhuma palavra, uma vez que todas já estavam nos arrays, mesmo assim o "cem" e o "mil" se repetiram, pois a lógica estava ficando muito complexa apenas para colocar a palavra recursivamente.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) Como você lidou com a performance na implementação do desafio 2,
+considerando que o array pode ter até 1 milhão de números?
+
+R:
+No desafio 2, lidei com a perfomace utilizando a soma dos números em um loop simples e direto, de forma mais eficiente para o array que tem projeção de até um mihão de posições.
+Utilizei também de boas práticas como o método SomarNumeros que tem como objetivo e ação específica, e também variáries locais.
+No geral a implementação ficou bem simples, mas também está bem otimizada, uma vez que dos métodos tradicionais de loop, o for é um mais indicado quando se trata de iterar grande número de elementos.
+Apesar de simples, pesquisei uma melhor forma de implementar a função lotes e também métodos async com Task, mas sinceramente se me questionassem não saberia explicar com clareza, então resolvei apostar no básico, limpo e bem escrito que finciona bem.
+
