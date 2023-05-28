@@ -12,10 +12,10 @@
   - [x] Implementação 2
   - [x] Questão 2
   - [x] Testes da Implementação 2
-- [ ] Desafio 3
+- [x] Desafio 3
   - [x] Implementação 3
   - [x] Questão 3
-  - [ ] Testes da Implementação 3
+  - [x] Testes da Implementação 3
 - [ ] Desafio 4
   - [ ] Implementação 4
   - [ ] Questão 4
