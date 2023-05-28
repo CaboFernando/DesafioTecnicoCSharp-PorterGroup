@@ -17,12 +17,19 @@ public class Program
         {
             if (int.TryParse(valor.Trim(), out int numero))
             {
-                object objeto = (object)numero;
-                listaOriginal.Add(objeto);
+                listaOriginal.Add(numero);
+            }
+            else if (double.TryParse(valor.Trim(), out double numeroDecimal))
+            {
+                listaOriginal.Add(numeroDecimal);
+            }
+            else if (DateTime.TryParse(valor.Trim(), out DateTime data))
+            {
+                listaOriginal.Add(data);
             }
             else
             {
-                Console.WriteLine($"Valor inválido: {valor}. Será ignorado.");
+                listaOriginal.Add(valor);
             }
         }
 
