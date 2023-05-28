@@ -7,23 +7,35 @@ public class Program
         return new List<T>(objetosUnicos);
     }
 
-    public static void Main(string[] args)
+    public static List<object> LerValoresDaEntrada()
     {
         Console.WriteLine("Insira os valores separados por vírgula:");
         string input = Console.ReadLine();
 
-        List<int> listaOriginal = new List<int>();
+        List<object> listaOriginal = new List<object>();
         foreach (string valor in input.Split(','))
         {
             if (int.TryParse(valor.Trim(), out int numero))
             {
-                listaOriginal.Add(numero);
+                object objeto = (object)numero;
+                listaOriginal.Add(objeto);
+            }
+            else
+            {
+                Console.WriteLine($"Valor inválido: {valor}. Será ignorado.");
             }
         }
 
+        return listaOriginal;
+    }
+
+    public static void Main(string[] args)
+    {
+        List<object> listaOriginal = LerValoresDaEntrada();
+
         if (listaOriginal.Count > 0)
         {
-            List<int> listaUnica = ObterObjetosUnicos(listaOriginal);
+            List<object> listaUnica = ObterObjetosUnicos(listaOriginal);
 
             Console.WriteLine("Lista Original: " + string.Join(", ", listaOriginal));
             Console.WriteLine("Lista Única: " + string.Join(", ", listaUnica));
