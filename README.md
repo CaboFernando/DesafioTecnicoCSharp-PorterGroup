@@ -17,6 +17,6 @@
   - [x] Questão 3
   - [x] Testes da Implementação 3
 - [ ] Desafio 4
-  - [ ] Implementação 4
-  - [ ] Questão 4
+  - [x] Implementação 4
+  - [x] Questão 4
   - [ ] Testes da Implementação 4
