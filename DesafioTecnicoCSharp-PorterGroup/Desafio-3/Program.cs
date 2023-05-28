@@ -8,14 +8,12 @@ public class Calculadora
 
         if (string.IsNullOrEmpty(expressao))
         {
-            Console.WriteLine("Erro: Expressão matemática ausente.");
-            Environment.Exit(1);
+            throw new ArgumentException("Erro: Expressão matemática ausente.");
         }
 
         if (expressao.Contains("/0"))
         {
-            Console.WriteLine("Erro: Expressão matemática tentou dividir por zero.");
-            Environment.Exit(1);
+            throw new DivideByZeroException("Erro: Expressão matemática tentou dividir por zero.");
         }
 
         Expression expressaoCalculada = new Expression(expressao);
@@ -27,24 +25,19 @@ public class Calculadora
         }
         catch (FormatException)
         {
-            Console.WriteLine("Erro: Formato de expressão matemática inválido.");
-            Environment.Exit(1);
+            throw new FormatException("Erro: Formato de expressão matemática inválido.");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Erro: Ocorreu uma exceção durante a avaliação da expressão: {ex.Message}");
-            Environment.Exit(1);
+            throw new Exception($"Erro: Ocorreu uma exceção durante a avaliação da expressão: {ex.Message}");
         }
-
-        return 0;
     }
 
     private static void VerificarErros(Expression expressaoCalculada)
     {
         if (expressaoCalculada.HasErrors())
         {
-            Console.WriteLine("Erro: Expressão matemática inválida.");
-            Environment.Exit(1);
+            throw new ArgumentException("Erro: Expressão matemática inválida.");
         }
     }
 
@@ -55,10 +48,17 @@ public class Calculadora
 
     public static void Main(string[] args)
     {
-        Console.WriteLine("Digite a expressão matemárica simples a ser calculada: ");
-        string expressao = Console.ReadLine();
+        try
+        {
+            Console.WriteLine("Digite a expressão matemárica simples a ser calculada: ");
+            string expressao = Console.ReadLine();
 
-        double resultado = AvaliarExpressao(expressao);
-        Console.WriteLine($"Resultado: {resultado}");
+            double resultado = AvaliarExpressao(expressao);
+            Console.WriteLine($"Resultado: {resultado}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 }
