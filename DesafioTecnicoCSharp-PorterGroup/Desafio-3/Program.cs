@@ -13,14 +13,15 @@ public class Calculadora
         Expression expressaoCalculada = new Expression(expressao);
         double resultado = 0;
 
-        try
-        {
-            resultado = Convert.ToDouble(expressaoCalculada.Evaluate());
-        }
-        catch (EvaluationException)
+        if (expressaoCalculada.HasErrors())
         {
             Console.WriteLine("Erro: Expressão matemática inválida.");
             Environment.Exit(1);
+        }
+
+        try
+        {
+            resultado = Convert.ToDouble(expressaoCalculada.Evaluate());
         }
         catch (FormatException)
         {
