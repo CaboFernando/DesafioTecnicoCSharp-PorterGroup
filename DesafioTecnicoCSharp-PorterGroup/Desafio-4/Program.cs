@@ -1,4 +1,6 @@
 ﻿
+using System.Globalization;
+
 public class Program
 {
     public static List<T> ObterObjetosUnicos<T>(List<T> lista)
@@ -19,7 +21,7 @@ public class Program
             {
                 listaOriginal.Add(numero);
             }
-            else if (double.TryParse(valor.Trim(), out double numeroDecimal))
+            else if (double.TryParse(valor.Trim(), NumberStyles.Number, CultureInfo.CreateSpecificCulture("en-US"), out double numeroDecimal))
             {
                 listaOriginal.Add(numeroDecimal);
             }
