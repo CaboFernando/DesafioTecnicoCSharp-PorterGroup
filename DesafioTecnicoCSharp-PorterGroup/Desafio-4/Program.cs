@@ -9,12 +9,28 @@ public class Program
 
     public static void Main(string[] args)
     {
-        // Exemplo de uso da função
-        List<int> listaOriginal = new List<int> { 1, 2, 3, 3, 4, 5, 5, 6, 7, 7 };
-        List<int> listaUnica = ObterObjetosUnicos(listaOriginal);
+        Console.WriteLine("Insira os valores separados por vírgula:");
+        string input = Console.ReadLine();
 
-        // Exibindo a lista com objetos únicos
-        Console.WriteLine("Lista Original: " + string.Join(", ", listaOriginal));
-        Console.WriteLine("Lista Única: " + string.Join(", ", listaUnica));
+        List<int> listaOriginal = new List<int>();
+        foreach (string valor in input.Split(','))
+        {
+            if (int.TryParse(valor.Trim(), out int numero))
+            {
+                listaOriginal.Add(numero);
+            }
+        }
+
+        if (listaOriginal.Count > 0)
+        {
+            List<int> listaUnica = ObterObjetosUnicos(listaOriginal);
+
+            Console.WriteLine("Lista Original: " + string.Join(", ", listaOriginal));
+            Console.WriteLine("Lista Única: " + string.Join(", ", listaUnica));
+        }
+        else
+        {
+            Console.WriteLine("Nenhum valor válido foi inserido na lista original.");
+        }
     }
 }
