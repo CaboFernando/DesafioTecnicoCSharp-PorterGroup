@@ -4,6 +4,12 @@ public class Calculadora
 {
     public static double AvaliarExpressao(string expressao)
     {
+        if (string.IsNullOrEmpty(expressao))
+        {
+            Console.WriteLine("Erro: Expressão matemática ausente.");
+            Environment.Exit(1);
+        }
+
         Expression expressaoCalculada = new Expression(expressao);
         double resultado = 0;
 
