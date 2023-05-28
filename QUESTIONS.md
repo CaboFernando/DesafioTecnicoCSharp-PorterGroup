@@ -29,3 +29,9 @@ Utilizei também de boas práticas como o método SomarNumeros que tem como obje
 No geral a implementação ficou bem simples, mas também está bem otimizada, uma vez que dos métodos tradicionais de loop, o for é um mais indicado quando se trata de iterar grande número de elementos.
 Apesar de simples, pesquisei uma melhor forma de implementar a função lotes e também métodos async com Task, mas sinceramente se me questionassem não saberia explicar com clareza, então resolvei apostar no básico, limpo e bem escrito que finciona bem.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) Como você lidou com os possíveis erros de entrada na implementação do
+desafio 3, como uma divisão por zero ou uma expressão inválida?
+
+No desafio 3, utilizei antes do processamento substito todos os espaços da expressão para padronizar e evitar erros, verifico se a string está nula ou vazia, método HasErros da biblioteca de calculo usada NCalc e também valido divisões por zero através do Contains("/0"). Utilizo também o método HasError da Expression criada com a biblioteca NCalc para verificar erros na expressão. E após todas essas etapas no processamento da expressão, uso tratamento de erros com try-catch para verificar e tratar expressões inválidas ou erros de execução.
