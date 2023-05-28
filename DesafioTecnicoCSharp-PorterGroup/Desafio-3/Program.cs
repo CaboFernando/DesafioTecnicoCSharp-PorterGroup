@@ -27,6 +27,11 @@ public class Calculadora
             Console.WriteLine("Erro: Formato de expressão matemática inválido.");
             Environment.Exit(1);
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro: Ocorreu uma exceção durante a avaliação da expressão: {ex.Message}");
+            Environment.Exit(1);
+        }
 
         return resultado;
     }
