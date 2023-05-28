@@ -35,3 +35,13 @@ Apesar de simples, pesquisei uma melhor forma de implementar a função lotes e 
 desafio 3, como uma divisão por zero ou uma expressão inválida?
 
 No desafio 3, utilizei antes do processamento substito todos os espaços da expressão para padronizar e evitar erros, verifico se a string está nula ou vazia, método HasErros da biblioteca de calculo usada NCalc e também valido divisões por zero através do Contains("/0"). Utilizo também o método HasError da Expression criada com a biblioteca NCalc para verificar erros na expressão. E após todas essas etapas no processamento da expressão, uso tratamento de erros com try-catch para verificar e tratar expressões inválidas ou erros de execução.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) Como você implementou a função que remove objetos repetidos na
+implementação do desafio 4? Quais foram os principais desafios
+encontrados?
+
+No desafio 4, o enunciado ficou meio simplório não definindo limitações ou a permanência da ordem da lista original com a lista nova com dados únicos então de inicio criei um méto simples que recebe uma lista genérica e através do HashSet cria uma lista com base na lista de entrada só que sem repetições.
+O principal desafio foi criar uma entrada de dados dinâmica de acordo com o que o usuário digitasse, ao invés de "chumbar" os valores via código.
+Separar a entrada de dados em um método específico ajudou bastante a generalizar o código sendo possível a input de dados de qualquer tipo, sendo o código capaz de aceitar string, int, double e dateTime.
