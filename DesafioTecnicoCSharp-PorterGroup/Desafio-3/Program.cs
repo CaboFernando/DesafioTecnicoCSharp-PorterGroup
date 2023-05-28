@@ -11,17 +11,11 @@ public class Calculadora
         }
 
         Expression expressaoCalculada = new Expression(expressao);
-        double resultado = 0;
-
-        if (expressaoCalculada.HasErrors())
-        {
-            Console.WriteLine("Erro: Expressão matemática inválida.");
-            Environment.Exit(1);
-        }
+        VerificarErros(expressaoCalculada);
 
         try
         {
-            resultado = Convert.ToDouble(expressaoCalculada.Evaluate());
+            return ExecutarExpressao(expressaoCalculada);
         }
         catch (FormatException)
         {
@@ -34,7 +28,21 @@ public class Calculadora
             Environment.Exit(1);
         }
 
-        return resultado;
+        return 0;
+    }
+
+    private static void VerificarErros(Expression expressaoCalculada)
+    {
+        if (expressaoCalculada.HasErrors())
+        {
+            Console.WriteLine("Erro: Expressão matemática inválida.");
+            Environment.Exit(1);
+        }
+    }
+
+    private static double ExecutarExpressao(Expression expressaoCalculada)
+    {
+        return Convert.ToDouble(expressaoCalculada.Evaluate());
     }
 
     public static void Main(string[] args)
