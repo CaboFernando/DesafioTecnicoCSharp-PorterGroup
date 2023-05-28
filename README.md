@@ -2,6 +2,8 @@
 
 ### Este repositório tem como objetivo apresentar resoluções de alguns desafios de programação na linguagem C#, junto de respostas a respeito das implementações
 
+#### Siga o chack list do status de cada atividade:
+
 - [x] Desafio 1
   - [x] Implementação 1
   - [x] Questão 1
