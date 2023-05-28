@@ -16,7 +16,21 @@
   - [x] Implementação 3
   - [x] Questão 3
   - [x] Testes da Implementação 3
-- [ ] Desafio 4
+- [x] Desafio 4
   - [x] Implementação 4
   - [x] Questão 4
-  - [ ] Testes da Implementação 4
+  - [x] Testes da Implementação 4
+
+Essa solution tem quatro pastas numeradas (1,2,3,4) tendo em cada pasta um projeto console app e um projeto de teste em xUnit.
+
+Rodando cada projeto console, será executada o programa solicitado em cada respectivo desafio, e cada projeto teste de cada pasta verifica casos de teste de cada projeto console app.
+
+Como solicitado, dentro da pasta do projeto tem o arquivo QUESTION.md contendo as respostas das questões sobre cada desafio.
+
+Todos foram feitos em .Net 6.0, utilizando os princípios SOLID e Clean Code.
+
+Teste técnico finalizado 28/05/2023 as 19:30.
+
+Att-
+
+Carlos Fernando dos Santos.
