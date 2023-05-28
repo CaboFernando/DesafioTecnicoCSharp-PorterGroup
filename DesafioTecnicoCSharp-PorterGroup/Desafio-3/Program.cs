@@ -42,7 +42,18 @@ public class Calculadora
 
     private static double ExecutarExpressao(Expression expressaoCalculada)
     {
-        return Convert.ToDouble(expressaoCalculada.Evaluate());
+        return VerificaDivisaoPorZero(Convert.ToDouble(expressaoCalculada.Evaluate()));
+    }
+
+    private static double VerificaDivisaoPorZero(double expressaoCalculada)
+    {
+        if (double.IsInfinity(expressaoCalculada))
+        {
+            Console.WriteLine("Erro: Expressão matemática tentou dividir por zero.");
+            Environment.Exit(1);
+        }
+
+        return expressaoCalculada;
     }
 
     public static void Main(string[] args)
