@@ -14,10 +14,12 @@ public class Calculadora
         catch (EvaluationException)
         {
             Console.WriteLine("Erro: Expressão matemática inválida.");
+            Environment.Exit(1);
         }
         catch (FormatException)
         {
             Console.WriteLine("Erro: Formato de expressão matemática inválido.");
+            Environment.Exit(1);
         }
 
         return resultado;
